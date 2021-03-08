@@ -7,5 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Blog';
-  
+  name="Raju Ahmed.";
+  getFullBlogTitile(){
+    return "This "+ this.title +" is developed by "+this.name;
+  }
+  blogerObj={
+    Id:1,
+    Name:"Marginal Raju",
+    Designation:"Software Engineer"
+  }
+
+  bloggerArray=['Azad','Sayed','Shohag','Anny']
 }
