@@ -1,3 +1,15 @@
+<style>
+  table, td, th {
+  border: 1px solid black;
+  text-align: center;
+}
+
+table {
+
+  border-collapse: collapse;
+}
+</style>
+
 <h1>Welcome to Angular 10: {{title}}</h1> 
 
 <h1>Angular 10: Interpolation</h1>
@@ -5,7 +17,7 @@
 
 
 <h1>Angular 10:Interpolation Working Object</h1>
-<table border="1" class="table">
+<table>
   <thead>
     <tr>
       <th>Id</th>
@@ -30,3 +42,67 @@
 <h1>Angular 10:Working With Function Calling</h1>
 <hr>
 <button (click)="firstButtonFunction()">Call The Function</button>
+<hr>
+<h1>Angular 10 Hindi tutorial #9 important event in angular</h1>
+<hr>
+<table >
+  <thead>
+    <tr>
+      <th>Click</th>
+      <th>Mouse Over</th>
+      <th>Mouse Enter</th>
+      <th>Mouse Leave</th>
+      <th>Key Up</th>
+      <th>Key Up Enter</th>
+      <th>Key Up Space</th>
+      <th>Key Down</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <button (click)="myClickEvent('This is the click Event.')">Click</button>
+      </td>
+      <td>
+        <button (mouseover)="myMouseOverEvent('This is the Mouse Over Event.')">Mouse Over</button>
+      </td>
+      <td>
+        <button (mouseenter)="myMouseEnterEvent('This is the Mouse Enter Event.')">Mouse Enter</button>
+      </td>
+      <td>
+        <button (mouseleave)="myMouseLeaveEvent('This is the Mouse Leave Event.')">Mouse Leave</button>
+      </td>
+      <td>
+        <input type="text" #keyUpTextBox (keyup)="myKeyUpEvent(keyUpTextBox.value)">
+      </td>
+      <td>
+        <input type="text" #keyUpEnterTextBox (keyup.enter)="myKeyUpEnterEvent(keyUpEnterTextBox.value)">
+      </td>
+      <td>
+        <input type="text" #keyUpSpaceTextBox (keyup.space)="myKeyUpSpaceEvent(keyUpSpaceTextBox.value)">
+      </td>
+      <td>
+        <input type="text" #keyDownTextBox (keydown)="myKeyDownEvent(keyDownTextBox.value)">
+      </td>
+    </tr>
+    <tr>
+      <td>{{myClickEventValue}}</td>
+      <td>{{myMouseOverEventValue}}</td>
+      <td>{{myMouseEnterEventValue}}</td>
+      <td>{{myMouseLeaveEventValue}}</td>
+      <td>{{keyupEvntValue}}</td>
+      <td>{{myKeyUpEnterEventValue}}</td>
+      <td>{{myKeyUpSpaceEventValue}}</td>
+      <td>{{keyDownEvntValue}}</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
