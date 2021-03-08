@@ -87,8 +87,12 @@ export class AppComponent {
   getClearMessage(evt){
     if(evt.length>0){
       alert("All text clear.");
-    }
-    
+    }    
+  }
+
+  disabledTextBox=true;
+  enableBoxt(){
+    this.disabledTextBox=false;
   }
 
 }
