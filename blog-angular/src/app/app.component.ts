@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'Blog';
   name="Raju Ahmed.";
@@ -26,7 +27,9 @@ export class AppComponent {
     console.warn(message);
     alert(message);
   };
+
   emptyValue="__________";
+
   myClickEventValue=this.emptyValue;
   myClickEvent(evt){
     this.myClickEventValue=evt;
@@ -67,4 +70,18 @@ export class AppComponent {
   myKeyDownEvent(evt){
     this.keyDownEvntValue=evt;
   }
+
+  crntTextBoxValue='';
+  crntTextBoxValue2='';
+  getTextBoxValue(evt){
+    this.crntTextBoxValue=evt.toUpperCase();
+    this.crntTextBoxValue2=evt.toLowerCase();
+  }
+
+  
+  clearTextBoxValue(){
+    this.crntTextBoxValue='';
+    this.crntTextBoxValue2='';
+  }
+
 }
