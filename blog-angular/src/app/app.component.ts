@@ -84,4 +84,11 @@ export class AppComponent {
     this.crntTextBoxValue2='';
   }
 
+  getClearMessage(evt){
+    if(evt.length>0){
+      alert("All text clear.");
+    }
+    
+  }
+
 }
