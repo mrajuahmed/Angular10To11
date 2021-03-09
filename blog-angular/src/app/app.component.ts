@@ -91,10 +91,12 @@ export class AppComponent {
   }
 
   disabledTextBox=true;
-  enableBoxt(){
-    this.disabledTextBox=false;
+  enableBoxt(evt){
+    this.disabledTextBox=!evt;
   }
 
-  show=true;
+  show=false;
+  colorValue='red';
+  switchColor='green';
 
 }

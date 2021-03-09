@@ -1,16 +1,18 @@
 <style>
-  table, td, th {
-  border: 1px solid black;
-  text-align: center;
-}
+  table,
+  td,
+  th {
+    border: 1px solid black;
+    text-align: center;
+  }
 
-table {
+  table {
 
-  border-collapse: collapse;
-}
+    border-collapse: collapse;
+  }
 </style>
 
-<h1>Welcome to Angular 10: {{title}}</h1> 
+<h1>Welcome to Angular 10: {{title}}</h1>
 
 <h1>Angular 10: Interpolation</h1>
 <h2 style="font-style:italic;">{{getFullBlogTitile()}}</h2>
@@ -45,7 +47,7 @@ table {
 <hr>
 <h1>Angular 10 Hindi tutorial #9 important event in angular</h1>
 <hr>
-<table >
+<table>
   <thead>
     <tr>
       <th>Click</th>
@@ -105,7 +107,8 @@ table {
 <h1>Get Textbox Value in Angular</h1>
 <input type="text" #txtBoxForPart10 />&nbsp;&nbsp;&nbsp;&nbsp;
 <button (click)="getTextBoxValue(txtBoxForPart10.value)"> Get Value</button>&nbsp;&nbsp;
-<button (mouseleave)="getClearMessage(txtBoxForPart10.value)" (click)="clearTextBoxValue();txtBoxForPart10.value=''"> Clear Value</button>
+<button (mouseleave)="getClearMessage(txtBoxForPart10.value)" (click)="clearTextBoxValue();txtBoxForPart10.value=''">
+  Clear Value</button>
 <h1>Text Box Value Uppercase: {{crntTextBoxValue}}</h1>
 <h1>Text Box Value Lowercase: {{crntTextBoxValue2}}</h1>
 <hr>
@@ -118,22 +121,55 @@ table {
 <br><br>
 <input type="text" [disabled]="disabledTextBox" value={{name}}>
 <br><br>
-<button (click)="enableBoxt()">Enable Text Box</button>
+<button (click)="enableBoxt(disabledTextBox)">Enable Text Box</button>
 <hr>
 <hr>
 <h1>Angular 10 tutorial #12 *ngIf | if else | conditional statement</h1>
-<h1>1. Working with boolean value.</h1>
-<div *ngIf="!show; then ifBlock else elseBlock">  
+<h1> Working with boolean value- Way 1.</h1>
+<div *ngIf="!show then ifBlock else elseBlock">
+
 </div>
 <ng-template #ifBlock>
-  <h3 >If Block</h3>
+  <h3>Showing If Block for - Way 1</h3>
 </ng-template>
 <ng-template #elseBlock>
-  <h3 >Else Block</h3>
-</ng-template>  
+  <h3>Showing Else Block for - Way 1</h3>
+</ng-template>
+<h1> Working with boolean value- Way 2.</h1>
+<div *ngIf="show else elseBlock">
+  <h3>Showing If Block for - Way 2</h3>
+</div>
+<ng-template #elseBlock>
+  <h3>Showing Else Block for - Way 2</h3>
+</ng-template>
+<h1> Working with string value- if else.</h1>
+<ng-container *ngIf="colorValue === 'red'">
+  <h3 [style.background-color]="'colorValue'">Color is red</h3>
+  <p [style.background-color]="'tomato'"></p>
+</ng-container>
+
+<ng-container *ngIf="colorValue === 'yellow'">
+  <h3 [style.background-color]=" 'colorValue' ">Color is yellow</h3>
+</ng-container>
+
+<ng-container *ngIf="colorValue === 'green'">
+  <h3 [style.background-color]=" 'colorValue' ">Color is green</h3>
+</ng-container>
 <hr>
 <br>
 <br>
+<hr>
+<hr>
+<h1>Angular 10 tutorial #13 Switch Case</h1>
+<div [ngSwitch]="switchColor">
+  <h3 style="background-color:red;color:white" *ngSwitchCase='"red"'>Red</h3>
+  <h3 style="background-color:green;color:white" *ngSwitchCase='"green"'>green</h3>
+  <h3 style="background-color:yellow;color:black" *ngSwitchCase='"yellow"'>yellow</h3>
+  <h3 style="background-color:white;color:black" *ngSwitchCase='"white"'>white</h3>
+  <h3 style="background-color:rgb(13, 34, 230);color:black" *ngSwitchDefault>Default</h3>
+</div>
+<hr>
+<hr>
 <br>
 <br>
 <br>
