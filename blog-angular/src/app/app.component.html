@@ -121,7 +121,7 @@
 <br><br>
 <input type="text" [disabled]="disabledTextBox" value={{name}}>
 <br><br>
-<button (click)="enableBoxt(disabledTextBox)">Enable Text Box</button>
+<button (click)="enableBoxt(disabledTextBox)" (mouseleave)="enableBoxKeyup()">Enable Text Box</button>
 <hr>
 <hr>
 <h1>Angular 10 tutorial #12 *ngIf | if else | conditional statement</h1>
@@ -169,6 +169,26 @@
   <h3 style="background-color:rgb(13, 34, 230);color:black" *ngSwitchDefault>Default</h3>
 </div>
 <hr>
+<br>
+<hr>
+<hr>
+<h1>Angular 10 tutorial #14 for loop | *ngFor</h1>
+<table>
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Age</td>
+      <td>Email</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of arryData | sort : ['name']">
+      <td>{{item.name.toUpperCase()}}</td>
+      <td>{{item.age}}</td>
+      <td>{{item.email.toLowerCase()}}</td>
+    </tr>
+  </tbody>
+</table>
 <hr>
 <br>
 <br>

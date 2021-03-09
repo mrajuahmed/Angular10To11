@@ -94,9 +94,20 @@ export class AppComponent {
   enableBoxt(evt){
     this.disabledTextBox=!evt;
   }
+  enableBoxKeyup(){
+    alert("Key Up");
+  }
 
   show=false;
   colorValue='red';
   switchColor='green';
+
+  arryData=[
+    {name:"Raju Ahmed", age:13, email:"raju@mail.com"},
+    {name:"Azad Hossain", age:34, email:"Azad@mail.com"},
+    {name:"Abu Sayed", age:46, email:"raju@mail.com"},
+    {name:"Emon", age:43, email:"Emon@mail.com"},
+    {name:"Shohag", age:86, email:"Shohag@mail.com"},
+  ]
 
 }
