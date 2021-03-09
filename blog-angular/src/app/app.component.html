@@ -121,6 +121,16 @@ table {
 <button (click)="enableBoxt()">Enable Text Box</button>
 <hr>
 <hr>
+<h1>Angular 10 tutorial #12 *ngIf | if else | conditional statement</h1>
+<h1>1. Working with boolean value.</h1>
+<div *ngIf="!show; then ifBlock else elseBlock">  
+</div>
+<ng-template #ifBlock>
+  <h3 >If Block</h3>
+</ng-template>
+<ng-template #elseBlock>
+  <h3 >Else Block</h3>
+</ng-template>  
 <hr>
 <br>
 <br>
