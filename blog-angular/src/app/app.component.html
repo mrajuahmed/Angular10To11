@@ -200,4 +200,20 @@
 <hr>
 <br>
 <br>
+<hr>
+<hr>
+<h1>Angular 10 Hindi tutorial #15 simple form and get form value</h1>
+<form #simpleForm="ngForm" (ngSubmit)="getFormValue(simpleForm)">
+  <input type="text" required="required"  ngModel name="username" placeholder="enter your username"><br><br>
+  <input type="text" required="required"  ngModel name="age" placeholder="enter your age"><br><br>
+  <input type="text" required="required"  ngModel name="adderess" placeholder="enter your adderess"><br><br>
+  <button type="submit">Get User Value</button><input type="button" value="Clear" (click)="ClearFormValue()">
+</form>
+<pre>{{setFormValue| json}}</pre>
+<br>
+<hr>
+<br>
+<br>
+<br>  
+<br>
 <br>

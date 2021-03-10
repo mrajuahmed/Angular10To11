@@ -112,4 +112,14 @@ export class AppComponent {
     
   ];
   
+  setFormValue=[];
+  getFormValue(frm){
+    this.setFormValue.push(frm.value);
+    console.warn(frm.value);
+    frm.reset();
+  }
+
+  ClearFormValue(){
+    this.setFormValue=[];
+  }
 }
