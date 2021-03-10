@@ -29,6 +29,8 @@ export class AppComponent {
   };
 
   emptyValue="__________";
+  
+
 
   myClickEventValue=this.emptyValue;
   myClickEvent(evt){
@@ -95,19 +97,19 @@ export class AppComponent {
     this.disabledTextBox=!evt;
   }
   enableBoxKeyup(){
-    alert("Key Up");
+    alert('hi');
   }
 
-  show=false;
   colorValue='red';
-  switchColor='green';
-
-  arryData=[
-    {name:"Raju Ahmed", age:13, email:"raju@mail.com"},
-    {name:"Azad Hossain", age:34, email:"Azad@mail.com"},
-    {name:"Abu Sayed", age:46, email:"raju@mail.com"},
-    {name:"Emon", age:43, email:"Emon@mail.com"},
-    {name:"Shohag", age:86, email:"Shohag@mail.com"},
-  ]
-
+  switchColor='red';
+  show=true;
+  arryData = [
+    {name:"Raju Ahmed", age: 30,email:'raju@mail.com' },
+    {name:"Azad Hossain", age: 31,email:'azad@mail.com' },
+    {name:"Abu Sayed", age: 32,email:'sayed@mail.com' },
+    {name:"Shohag Mia", age: 33,email:'shohag@mail.com' },
+    {name:"Tahira Biswas", age: 34,email:'anny@mail.com' },
+    
+  ];
+  
 }

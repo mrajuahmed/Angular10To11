@@ -7,7 +7,7 @@
   }
 
   table {
-
+    width: 100%;
     border-collapse: collapse;
   }
 </style>
@@ -176,16 +176,18 @@
 <table>
   <thead>
     <tr>
-      <td>Name</td>
+      <td>Full Object as "item | json"</td>
+      <td>Name(Upper Case)</td>
       <td>Age</td>
-      <td>Email</td>
+      <td>Email(Lower Case)</td>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let item of arryData ">
-      <td>{{item.name.toUpperCase()}}</td>
+    <tr *ngFor="let item of arryData">
+      <td style="text-align: left">{{item | json }}</td>
+      <td style="text-align: left">{{item.name.toUpperCase()}}</td>
       <td>{{item.age}}</td>
-      <td>{{item.email.toLowerCase()}}</td>
+      <td style="text-align: left">{{item.email.toLowerCase()}}</td>
     </tr>
   </tbody>
 </table>
