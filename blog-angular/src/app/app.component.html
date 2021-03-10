@@ -173,17 +173,23 @@
 <hr>
 <hr>
 <h1>Angular 10 tutorial #14 for loop | *ngFor</h1>
+<h3>Print Full Array Object in JSON format</h3>
+<pre>
+  {{arryData|json}}
+</pre>
 <table>
   <thead>
     <tr>
-      <td>Full Object as "item | json"</td>
-      <td>Name(Upper Case)</td>
-      <td>Age</td>
-      <td>Email(Lower Case)</td>
+      <th>SL(index + 1)</th>
+      <th>Full Object as "item | json"</th>
+      <th>Name(Upper Case)</th>
+      <th>Age</th>
+      <th>Email(Lower Case)</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let item of arryData">
+    <tr *ngFor="let item of arryData; let i = index">
+      <td style="text-align: left;">{{i+1}}</td>
       <td style="text-align: left">{{item | json }}</td>
       <td style="text-align: left">{{item.name.toUpperCase()}}</td>
       <td>{{item.age}}</td>
