@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component,OnInit,OnDestroy } from '@angular/core';
+import { NgForm } from '@angular/forms'
+import { ViewChild } from '@angular/core'
 
 @Component({
   selector: 'app-root',
@@ -6,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
+export class AppComponent  {
   title = 'Blog';
   name="Raju Ahmed.";
 
@@ -103,6 +105,7 @@ export class AppComponent {
   colorValue='red';
   switchColor='red';
   show=true;
+  
   arryData = [
     {name:"Raju Ahmed", age: 30,email:'raju@mail.com' },
     {name:"Azad Hossain", age: 31,email:'azad@mail.com' },
@@ -111,15 +114,20 @@ export class AppComponent {
     {name:"Tahira Biswas", age: 34,email:'anny@mail.com' },
     
   ];
-  
+
+
   setFormValue=[];
   getFormValue(frm){
     this.setFormValue.push(frm.value);
-    console.warn(frm.value);
-    frm.reset();
+    console.warn(frm.value);    
   }
+  @ViewChild('simpleForm') simpleForm: NgForm;
 
   ClearFormValue(){
     this.setFormValue=[];
+    this.simpleForm.reset();
   }
+  
+
+  
 }
