@@ -221,6 +221,25 @@
 <h4 [style.backgroundColor]="styleBindingColor">Angular Style Binding</h4>
 <input type="button" value="Toggle Style" (click)="toggleStyleBindingColor()">
 <hr>
+<br>
+<br>
+<hr>
+<hr>
+<h1>Angular 10 tutorial #18 Add Bootstrap</h1>
+<p>
+  <ngb-alert [dismissible]="false">
+    <strong>Warning!</strong> Better check yourself, you're not looking too good.
+  </ngb-alert>
+</p>
+<h2>Loop for Alerts</h2>
+<p *ngFor="let alert of alerts">
+  <ngb-alert [type]="alert.type" (closed)="close(alert)">{{ alert.message }}</ngb-alert>
+</p>
+<p>
+  <button type="button" class="btn btn-primary" (click)="reset()">Reset</button>
+</p>
+
+<hr>
 
 
 <app-footer></app-footer>
