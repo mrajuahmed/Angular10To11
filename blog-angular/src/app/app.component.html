@@ -206,9 +206,21 @@
   <input type="text" required="required"  ngModel name="username" placeholder="enter your username"><br><br>
   <input type="text" required="required"  ngModel name="age" placeholder="enter your age"><br><br>
   <input type="text" required="required"  ngModel name="adderess" placeholder="enter your adderess"><br><br>
-  <button type="submit">Get User Value</button><input type="button" value="Clear" (click)="ClearFormValue()">
+  <button type="submit">Get User Value</button>
+  <input type="button" value="Clear" (click)="ClearFormValue()">
 </form>
 <pre>{{setFormValue| json}}</pre>
+<hr>
 <br>
+<br>
+<br>
+<hr>
+<hr>
+<h1>Angular 10 tutorial #17 Style binding</h1>
+<h4 style="color:red;">CSS Style Binding</h4>
+<h4 [style.backgroundColor]="styleBindingColor">Angular Style Binding</h4>
+<input type="button" value="Toggle Style" (click)="toggleStyleBindingColor()">
+<hr>
+
 
 <app-footer></app-footer>

@@ -118,7 +118,12 @@ export class AppComponent  {
 
   setFormValue=[];
   getFormValue(frm){
-    this.setFormValue.push(frm.value);
+    debugger;
+    if(frm.value.username !='')
+    {
+      this.setFormValue.push(frm.value);
+    }
+    
     console.warn(frm.value);    
   }
   @ViewChild('simpleForm') simpleForm: NgForm;
@@ -128,6 +133,14 @@ export class AppComponent  {
     this.simpleForm.reset();
   }
   
-
-  
+  styleBindingColor='green';
+  isStyleBinded=false;
+  toggleStyleBindingColor(){
+    if(this.isStyleBinded){
+      this.styleBindingColor='green';
+    }else{
+      this.styleBindingColor='red';
+    }
+    this.isStyleBinded=!this.isStyleBinded;
+  }
 }
