@@ -163,11 +163,18 @@ export class AppComponent  {
 
 
   setFormValue=[];
+  
   getFormValue(frm){
     debugger;
     if(frm.value.username !='')
     {
-      this.setFormValue.push(frm.value);
+      const check=this.setFormValue.filter(x=> x.username==frm.value.username)
+      if(check.length >0){
+        alert("Usename '"+frm.value.username+"' already exists!!!.");
+      }else{
+        this.setFormValue.push(frm.value);
+      }
+      
     }
     
     console.warn(frm.value);    

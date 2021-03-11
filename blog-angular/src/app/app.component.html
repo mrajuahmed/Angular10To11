@@ -204,12 +204,23 @@
 <hr>
 <hr>
 <h1>Angular 10 Hindi tutorial #15 simple form and get form value</h1>
-<form #simpleForm="ngForm" (ngSubmit)="getFormValue(simpleForm)">
-  <input type="text" required="required" ngModel name="username" placeholder="enter your username"><br><br>
-  <input type="text" required="required" ngModel name="age" placeholder="enter your age"><br><br>
-  <input type="text" required="required" ngModel name="adderess" placeholder="enter your adderess"><br><br>
-  <button type="submit">Get User Value</button>
-  <input type="button" value="Clear" (click)="ClearFormValue()">
+
+<form class="example-form" #simpleForm="ngForm" (ngSubmit)="getFormValue(simpleForm)">
+  <mat-form-field class="example-full-width">
+    <mat-label>User Name</mat-label>
+    <input matInput type="text" required="required" ngModel name="username" placeholder="enter your username" >
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Age</mat-label>
+    <input matInput type="text" required="required" ngModel name="age" placeholder="enter your age"><br><br>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input matInput type="text" required="required" ngModel name="adderess" placeholder="enter your email"><br><br>
+  </mat-form-field>
+  
+  <button type="submit" mat-raised-button color="primary">Get User Value</button>&nbsp;&nbsp;
+  <button (click)="ClearFormValue()" mat-raised-button color="warn">Clear</button>
 </form>
 <pre>{{setFormValue| json}}</pre>
 <hr>
