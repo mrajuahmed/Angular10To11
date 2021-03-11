@@ -1,6 +1,7 @@
 import { Component,OnInit,OnDestroy } from '@angular/core';
 import { NgForm } from '@angular/forms'
 import { ViewChild } from '@angular/core'
+import { HttpErrorResponse } from '@angular/common/http';
 
 interface Alert {
   type: string;
@@ -196,4 +197,13 @@ export class AppComponent  {
     }
     this.isStyleBinded=!this.isStyleBinded;
   }
+
+
+  stringDataPassingToChild="Raju Ahmed";
+  objDataPassingToChild=[
+    {empName:"Raju Ahmed",Dept:"AML", email:"raju@mail.com"},
+    {empName:"Shohag Mia",Dept:"AML", email:"Shohag@mail.com"},
+    {empName:"Azad Hossain",Dept:"CBS", email:"Azad@mail.com"},
+    {empName:"Sumon Hossain",Dept:"HR", email:"Sumon@mail.com"}
+  ]
 }

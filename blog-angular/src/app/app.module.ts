@@ -13,12 +13,16 @@ import {MatButtonModule} from '@angular/material/button'
 import {MatDividerModule} from '@angular/material/divider';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
+import { UsersComponent } from './users/users.component';
+import {MatTableModule} from '@angular/material/table';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    UsersComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +33,8 @@ import {MatInputModule} from '@angular/material/input';
     MatButtonModule,
     MatDividerModule,
     MatIconModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
