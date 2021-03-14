@@ -15,7 +15,6 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import { UsersComponent } from './users/users.component';
 import {MatTableModule} from '@angular/material/table';
-import {MatSort} from '@angular/material/sort';
 
 
 @NgModule({
@@ -35,8 +34,7 @@ import {MatSort} from '@angular/material/sort';
     MatDividerModule,
     MatIconModule,
     MatInputModule,
-    MatTableModule,
-    MatSort
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
