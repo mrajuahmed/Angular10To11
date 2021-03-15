@@ -1,8 +1,7 @@
-import { Component,OnInit,OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NgForm } from '@angular/forms'
 import { ViewChild } from '@angular/core'
 import { HttpErrorResponse } from '@angular/common/http';
-
 interface Alert {
   type: string;
   message: string;
@@ -41,7 +40,7 @@ const ALERTS: Alert[] = [{
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent  {
+export class AppComponent {
   alerts: Alert[];
 
   constructor() {
@@ -57,158 +56,165 @@ export class AppComponent  {
   }
 
   title = 'Blog';
-  name="Raju Ahmed.";
+  name = "Raju Ahmed.";
 
-  getFullBlogTitile(){
-    return "This "+ this.title +" is developed by "+this.name;
+  getFullBlogTitile() {
+    return "This " + this.title + " is developed by " + this.name;
   }
 
-  blogerObj={
-    Id:1,
-    Name:"Marginal Raju",
-    Designation:"Software Engineer"
+  blogerObj = {
+    Id: 1,
+    Name: "Marginal Raju",
+    Designation: "Software Engineer"
   };
 
-  bloggerArray=['Azad','Sayed','Shohag','Anny'];
+  bloggerArray = ['Azad', 'Sayed', 'Shohag', 'Anny'];
 
-  firstButtonFunction(){
-    var message="Your First Function Was Successfully Binded With This Button ";
+  firstButtonFunction() {
+    var message = "Your First Function Was Successfully Binded With This Button ";
     console.warn(message);
     alert(message);
   };
 
-  emptyValue="__________";
-  
+  emptyValue = "__________";
 
 
-  myClickEventValue=this.emptyValue;
-  myClickEvent(evt){
-    this.myClickEventValue=evt;
-    this.emptyValue=evt;
+
+  myClickEventValue = this.emptyValue;
+  myClickEvent(evt) {
+    this.myClickEventValue = evt;
+    this.emptyValue = evt;
   }
 
-  myMouseOverEventValue=this.emptyValue;
-  myMouseOverEvent(evt){
-    this.myMouseOverEventValue=evt;
+  myMouseOverEventValue = this.emptyValue;
+  myMouseOverEvent(evt) {
+    this.myMouseOverEventValue = evt;
   }
 
-  myMouseEnterEventValue=this.emptyValue;
-  myMouseEnterEvent(evt){
-    this.myMouseEnterEventValue=evt;
+  myMouseEnterEventValue = this.emptyValue;
+  myMouseEnterEvent(evt) {
+    this.myMouseEnterEventValue = evt;
   }
 
-  myMouseLeaveEventValue=this.emptyValue;
-  myMouseLeaveEvent(evt){
-    this.myMouseLeaveEventValue=evt;
+  myMouseLeaveEventValue = this.emptyValue;
+  myMouseLeaveEvent(evt) {
+    this.myMouseLeaveEventValue = evt;
   }
 
-  keyupEvntValue=this.emptyValue;
-  myKeyUpEvent(vle){
-    this.keyupEvntValue=vle;
+  keyupEvntValue = this.emptyValue;
+  myKeyUpEvent(vle) {
+    this.keyupEvntValue = vle;
   }
 
-  myKeyUpEnterEventValue=this.emptyValue;
-  myKeyUpEnterEvent(evt){
-    this.myKeyUpEnterEventValue=evt;
+  myKeyUpEnterEventValue = this.emptyValue;
+  myKeyUpEnterEvent(evt) {
+    this.myKeyUpEnterEventValue = evt;
   }
 
-  myKeyUpSpaceEventValue=this.emptyValue;
-  myKeyUpSpaceEvent(evt){
-    this.myKeyUpSpaceEventValue=evt;
+  myKeyUpSpaceEventValue = this.emptyValue;
+  myKeyUpSpaceEvent(evt) {
+    this.myKeyUpSpaceEventValue = evt;
   }
 
-  keyDownEvntValue=this.emptyValue;
-  myKeyDownEvent(evt){
-    this.keyDownEvntValue=evt;
+  keyDownEvntValue = this.emptyValue;
+  myKeyDownEvent(evt) {
+    this.keyDownEvntValue = evt;
   }
 
-  crntTextBoxValue='';
-  crntTextBoxValue2='';
-  getTextBoxValue(evt){
-    this.crntTextBoxValue=evt.toUpperCase();
-    this.crntTextBoxValue2=evt.toLowerCase();
+  crntTextBoxValue = '';
+  crntTextBoxValue2 = '';
+  getTextBoxValue(evt) {
+    this.crntTextBoxValue = evt.toUpperCase();
+    this.crntTextBoxValue2 = evt.toLowerCase();
   }
 
-  
-  clearTextBoxValue(){
-    this.crntTextBoxValue='';
-    this.crntTextBoxValue2='';
+
+  clearTextBoxValue() {
+    this.crntTextBoxValue = '';
+    this.crntTextBoxValue2 = '';
   }
 
-  getClearMessage(evt){
-    if(evt.length>0){
+  getClearMessage(evt) {
+    if (evt.length > 0) {
       alert("All text clear.");
-    }    
+    }
   }
 
-  disabledTextBox=true;
-  enableBoxt(evt){
-    this.disabledTextBox=!evt;
+  disabledTextBox = true;
+  enableBoxt(evt) {
+    this.disabledTextBox = !evt;
   }
-  enableBoxKeyup(){
+  enableBoxKeyup() {
     alert('hi');
   }
 
-  colorValue='red';
-  switchColor='red';
-  show=true;
-  
+  colorValue = 'red';
+  switchColor = 'red';
+  show = true;
+
   arryData = [
-    {name:"Raju Ahmed",   age: 30,email:'raju@mail.com' },
-    {name:"Azad Hossain", age: 31,email:'azad@mail.com' },
-    {name:"Abu Sayed",    age: 32,email:'sayed@mail.com' },
-    {name:"Shohag Mia",   age: 33,email:'shohag@mail.com' },
-    {name:"Tahira Biswas",age: 34,email:'anny@mail.com' },
-    
+    { name: "Raju Ahmed", age: 30, email: 'raju@mail.com' },
+    { name: "Azad Hossain", age: 31, email: 'azad@mail.com' },
+    { name: "Abu Sayed", age: 32, email: 'sayed@mail.com' },
+    { name: "Shohag Mia", age: 33, email: 'shohag@mail.com' },
+    { name: "Tahira Biswas", age: 34, email: 'anny@mail.com' },
+
   ];
 
 
-  setFormValue=[];
-  
-  getFormValue(frm){
+  setFormValue = [];
+
+  getFormValue(frm) {
     debugger;
-    if(frm.value.username !='')
-    {
-      const check=this.setFormValue.filter(x=> x.username==frm.value.username)
-      if(check.length >0){
-        alert("Usename '"+frm.value.username+"' already exists!!!.");
-      }else{
+    if (frm.value.username != '') {
+      const check = this.setFormValue.filter(x => x.username == frm.value.username)
+      if (check.length > 0) {
+        alert("Usename '" + frm.value.username + "' already exists!!!.");
+      } else {
         this.setFormValue.push(frm.value);
       }
-      
+
     }
-    
-    console.warn(frm.value);    
+
+    console.warn(frm.value);
   }
   @ViewChild('simpleForm') simpleForm: NgForm;
 
-  ClearFormValue(){
-    this.setFormValue=[];
+  ClearFormValue() {
+    this.setFormValue = [];
     this.simpleForm.reset();
   }
-  
-  styleBindingColor='green';
-  isStyleBinded=false;
-  toggleStyleBindingColor(){
-    if(this.isStyleBinded){
-      this.styleBindingColor='green';
-    }else{
-      this.styleBindingColor='red';
+
+  styleBindingColor = 'green';
+  isStyleBinded = false;
+  toggleStyleBindingColor() {
+    if (this.isStyleBinded) {
+      this.styleBindingColor = 'green';
+    } else {
+      this.styleBindingColor = 'red';
     }
-    this.isStyleBinded=!this.isStyleBinded;
+    this.isStyleBinded = !this.isStyleBinded;
   }
 
 
-  stringDataPassingToChild="Raju Ahmed";
-  objDataPassingToChild=[
-    {empName:"Raju Ahmed",Dept:"AML", email:"raju@mail.com"},
-    {empName:"Azad Hossain",Dept:"CBS", email:"Azad@mail.com"},
-    {empName:"Sumon Hossain",Dept:"HR", email:"Sumon@mail.com"}
+  stringDataPassingToChild = "Raju Ahmed";
+  objDataPassingToChild = [
+    { empName: "Raju Ahmed", Dept: "AML", email: "raju@mail.com" },
+    { empName: "Azad Hossain", Dept: "CBS", email: "Azad@mail.com" },
+    { empName: "Sumon Hossain", Dept: "HR", email: "Sumon@mail.com" }
   ]
 
-  childData=[];
-  getDataFromChildComponent(data){
-    this.childData=data;
+  childData = [];
+  getDataFromChildComponent(data) {
+    this.childData = data;
     console.warn(data);
   }
+  //pipe
+
+  nametoLowerCase = "RAju aHMED.";
+  todaydate = new Date();
+  jsonval = { name: 'Rox', age: '25', address: { a1: 'Mumbai', a2: 'Karnataka' } };
+  months = ["Jan", "Feb", "Mar", "April", "May", "Jun",
+    "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
+
 }
