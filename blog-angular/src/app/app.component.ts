@@ -154,11 +154,11 @@ export class AppComponent  {
   show=true;
   
   arryData = [
-    {name:"Raju Ahmed", age: 30,email:'raju@mail.com' },
+    {name:"Raju Ahmed",   age: 30,email:'raju@mail.com' },
     {name:"Azad Hossain", age: 31,email:'azad@mail.com' },
-    {name:"Abu Sayed", age: 32,email:'sayed@mail.com' },
-    {name:"Shohag Mia", age: 33,email:'shohag@mail.com' },
-    {name:"Tahira Biswas", age: 34,email:'anny@mail.com' },
+    {name:"Abu Sayed",    age: 32,email:'sayed@mail.com' },
+    {name:"Shohag Mia",   age: 33,email:'shohag@mail.com' },
+    {name:"Tahira Biswas",age: 34,email:'anny@mail.com' },
     
   ];
 
@@ -202,8 +202,13 @@ export class AppComponent  {
   stringDataPassingToChild="Raju Ahmed";
   objDataPassingToChild=[
     {empName:"Raju Ahmed",Dept:"AML", email:"raju@mail.com"},
-    {empName:"Shohag Mia",Dept:"AML", email:"Shohag@mail.com"},
     {empName:"Azad Hossain",Dept:"CBS", email:"Azad@mail.com"},
     {empName:"Sumon Hossain",Dept:"HR", email:"Sumon@mail.com"}
   ]
+
+  childData=[];
+  getDataFromChildComponent(data){
+    this.childData=data;
+    console.warn(data);
+  }
 }
