@@ -17,6 +17,7 @@ import { UsersComponent } from './users/users.component';
 import {MatTableModule} from '@angular/material/table';
 import { AdminComponent } from './admin/admin.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { CustomDirectiveDirective } from './custom-directive.directive';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     UsersComponent,
     AdminComponent,
     PagenotfoundComponent,
+    CustomDirectiveDirective,
   ],
   imports: [
     BrowserModule,
