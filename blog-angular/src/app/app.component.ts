@@ -1,7 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NgForm } from '@angular/forms'
 import { ViewChild } from '@angular/core'
-import { HttpErrorResponse } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
+import { FirstServiceService } from './first-service.service';
 interface Alert {
   type: string;
   message: string;
@@ -43,10 +44,17 @@ const ALERTS: Alert[] = [{
 export class AppComponent {
   alerts: Alert[];
 
-  constructor() {
+  dataFromFirstService ={};
+  constructor(private fstService: FirstServiceService) {
     this.reset();
+    this.dataFromFirstService = fstService.getData();
+debugger;
+    let mydata=this.fstService.getApiData();
+    console.log("blaaa bllaaa is adkfjslfjsldjsl")
+    console.warn(mydata)
+    
   }
-
+  
   close(alert: Alert) {
     this.alerts.splice(this.alerts.indexOf(alert), 1);
   }

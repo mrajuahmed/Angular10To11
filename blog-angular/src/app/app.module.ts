@@ -18,7 +18,7 @@ import {MatTableModule} from '@angular/material/table';
 import { AdminComponent } from './admin/admin.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { CustomDirectiveDirective } from './custom-directive.directive';
-
+import{HttpClientModule}from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -40,7 +40,8 @@ import { CustomDirectiveDirective } from './custom-directive.directive';
     MatDividerModule,
     MatIconModule,
     MatInputModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
