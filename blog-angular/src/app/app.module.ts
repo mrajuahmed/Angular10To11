@@ -16,6 +16,7 @@ import {MatInputModule} from '@angular/material/input';
 import { UsersComponent } from './users/users.component';
 import {MatTableModule} from '@angular/material/table';
 import { AdminComponent } from './admin/admin.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { AdminComponent } from './admin/admin.component';
     FooterComponent,
     UsersComponent,
     AdminComponent,
+    PagenotfoundComponent,
   ],
   imports: [
     BrowserModule,

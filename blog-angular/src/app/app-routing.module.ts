@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminComponent} from './admin/admin.component'
-import {UsersComponent} from './users/users.component'
+import { AdminComponent} from './admin/admin.component';
+import {UsersComponent} from './users/users.component';
+import{PagenotfoundComponent}from './pagenotfound/pagenotfound.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path:"user",
     component:UsersComponent
+  },
+  {
+    path:"**",
+    component:PagenotfoundComponent
   }
 ];
 
