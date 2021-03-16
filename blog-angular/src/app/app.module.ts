@@ -15,6 +15,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import { UsersComponent } from './users/users.component';
 import {MatTableModule} from '@angular/material/table';
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import {MatTableModule} from '@angular/material/table';
     HeaderComponent,
     FooterComponent,
     UsersComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
